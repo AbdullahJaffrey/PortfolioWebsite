@@ -1,1 +1,478 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Abdullah Jafri - Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   html {
+            scroll-behavior: smooth;
+        }
+.padd-required-button{
+    float: inline-start;
+}
 
+        .card-container {
+            perspective: 1000px;
+        }
+        .card {
+            transition: transform 0.5s;
+        }
+        .sticky-section {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #5196fd;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .social-icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: #5196fd;
+        }
+        .header-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .blog-card {
+            transition: transform 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+	.inline-grid{
+	display: inline-grid;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.card.flex {
+    width: 100%;
+    height: 665px;
+}
+
+button.padd-required{
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+}
+
+  </style>
+ </head>
+ <body class="bg-black">
+  <!-- Header/Navigation -->
+  <header class="fixed w-full z-50 bg-black/90 header-blur border-b border-gray-800">
+   <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+     <div class="text-white text-xl font-bold">
+      AJ
+     </div>
+     <nav class="hidden md:flex items-center space-x-8">
+      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#about">
+       About
+      </a>
+      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#skills">
+       Skills
+      </a>
+      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#blog">
+       Blog
+      </a>
+      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#projects">
+       Projects
+      </a>
+      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#contact">
+       Contact
+      </a>
+     </nav>
+     <div class="flex items-center space-x-4">
+      <button class="px-4 py-2 text-sm text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-md hover:from-blue-600 hover:to-blue-800 transition-all"  href="AbdullahJafri-Resume.pdf" download>
+       Download CV
+      </button>
+      <a class="text-gray-300 hover:text-white transition-colors" href="https://github.com/AbdullahJaffrey" target="_blank">
+       <i class="fab fa-github text-xl">
+       </i>
+      </a>
+      <a class="text-gray-300 hover:text-white transition-colors" href="https://www.linkedin.com/in/abdullah-jaffrey-685b2921a/" target="_blank">
+       <i class="fab fa-linkedin text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section id="me" class="text-white min-h-screen w-full bg-slate-950 grid place-content-center relative pt-20">
+   <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px]">
+   </div>
+   <div class="text-center z-10">
+    <h1 class="text-5xl 2xl:text-7xl px-8 font-semibold tracking-tight leading-[120%] mb-4">
+     Abdullah Jaffrey
+    </h1>
+    <p class="text-2xl text-gray-400">
+     Data Analyst &amp; Python Developer
+    </p>
+   </div>
+  </section>
+  <!-- Cards Section -->
+  <section class="text-white w-full bg-slate-950">
+   <!-- About Card -->
+   <div class="sticky-section" id="about">
+    <div class="card flex flex-col relative h-[450px] w-[90%] md:w-[70%] rounded-md p-10 bg-[#8r89fe]" style="transform: scale(0.95);">
+     <h2 class="text-2xl text-center font-semibold">
+      About Me
+     </h2>
+     <div class="flex flex-col md:flex-row h-full mt-5 gap-10">
+      <div class="w-full md:w-[40%] relative top-[10%]">
+       <p class="text-sm">
+        Data Analyst with expertise in Python, SQL, and data visualization, adept at transforming complex datasets into actionable insights.
+       </p>
+       <p class="mt-4 padd-required">
+        Based in Karachi, Pakistan
+       </p>
+      <button class="padd-required padd-required-button px-4 py-2 text-sm text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-md hover:from-blue-600 hover:to-blue-800 transition-all"  href="AbdullahJafri-Resume.pdf" download>
+       Download CV
+      </button>
+      </div>
+      <div class="relative w-full md:w-[60%] h-full rounded-lg overflow-hidden">
+       <div class="grid grid-cols-2 gap-4 p-6 bg-white/10 rounded-lg h-full">
+        <div class="text-center p-4 bg-white/10 rounded-lg inline-grid">
+         <h3 class="font-bold">
+          4+
+         </h3>
+         <p class="text-sm">
+          Projects
+         </p>
+        </div>
+        <div class="text-center p-4 bg-white/10 rounded-lg inline-grid">
+         <h3 class="font-bold">
+          3
+         </h3>
+         <p class="text-sm">
+          Internships
+         </p>
+        </div>
+        <div class="text-center p-4 bg-white/10 rounded-lg inline-grid">
+         <h3 class="font-bold">
+          Python
+         </h3>
+         <p class="text-sm">
+          Expert
+         </p>
+        </div>
+        <div class="text-center p-4 bg-white/10 rounded-lg inline-grid">
+         <h3 class="font-bold">
+          SQL
+         </h3>
+         <p class="text-sm">
+          Advanced
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Skills Card -->
+   <div class="sticky-section" id="skills">
+    <div class="card flex flex-col relative h-[450px] w-[90%] md:w-[70%] rounded-md p-10 bg-[#5196fd]" style="transform: scale(0.90);">
+     <h2 class="text-2xl text-center font-semibold">
+      Skills &amp; Expertise
+     </h2>
+     <div class="flex flex-col md:flex-row h-full mt-5 gap-10">
+      <div class="w-full md:w-[40%] relative top-[10%]">
+       <p class="text-sm mb-4">
+        Technical Proficiencies
+       </p>
+       <div class="space-y-2">
+        <div class="flex items-center justify-between">
+         <span>
+          Python
+         </span>
+         <div class="w-32 h-2 bg-white/20 rounded-full">
+          <div class="w-28 h-2 bg-white rounded-full">
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center justify-between">
+         <span>
+          SQL
+         </span>
+         <div class="w-32 h-2 bg-white/20 rounded-full">
+          <div class="w-24 h-2 bg-white rounded-full">
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center justify-between">
+         <span>
+          PowerBI
+         </span>
+         <div class="w-32 h-2 bg-white/20 rounded-full">
+          <div class="w-20 h-2 bg-white rounded-full">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="relative w-full md:w-[60%] h-full rounded-lg overflow-hidden">
+       <div class="grid grid-cols-3 gap-4 p-6">
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         Docker
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         DBT
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         Knime
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         Excel
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         PowerBI
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         Looker
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         HTML
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         CSS
+        </div>
+        <div class="text-center p-3 bg-white/10 rounded-lg">
+         JS
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Blog Card -->
+   <div class="sticky-section" id="blog">
+    <div class="card flex flex-col relative h-[450px] w-[90%] md:w-[70%] rounded-md p-10 bg-[#8f89ff]" style="transform: scale(0.75);">
+     <h2 class="text-2xl text-center font-semibold">
+      Featured Blog
+     </h2>
+     <div class="flex flex-col md:flex-row h-full mt-5 gap-10">
+      <div class="w-full relative">
+       <div class="bg-white/10 p-6 rounded-lg h-full">
+        <div class="flex flex-col h-full">
+         <div class="flex-1">
+          <div class="flex items-start space-x-4">
+           <div class="flex-1">
+            <h3 class="text-xl font-semibold mb-2">
+             How to Analyze Criminal Patterns in Baltimore (2010-2016) Using KNIME Analytics Platform
+            </h3>
+            <p class="text-sm text-white/80 mb-4">
+             I'm thrilled to announce my first blog that explores the comprehensive analysis of crime patterns in Baltimore using the KNIME Analytics Platform. This analysis covers data from 2010 to 2016, uncovering key insights and trends.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+             <span class="px-3 py-1 bg-white/20 rounded-full text-xs">
+              KNIME
+             </span>
+             <span class="px-3 py-1 bg-white/20 rounded-full text-xs">
+              Data Analysis
+             </span>
+             <span class="px-3 py-1 bg-white/20 rounded-full text-xs">
+              Crime Analysis
+             </span>
+             <span class="px-3 py-1 bg-white/20 rounded-full text-xs">
+              Visualization
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="mt-4">
+          <a class="inline-flex items-center px-4 py-2 bg-white text-[#8f89ff] rounded-md hover:bg-opacity-90 transition-colors" href="https://medium.com/low-code-for-advanced-data-science/how-to-analysis-the-criminal-patterns-in-baltimore-2010-2016-using-knime-analytics-platform-a80b15c39fcd" target="_blank">
+           <span>
+            Read on Medium
+           </span>
+           <i class="fas fa-external-link-alt ml-2">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Projects Card -->
+   <div class="sticky-section" id="projects">
+    <div class="card flex flex-col relative h-[450px] w-[90%] md:w-[70%] rounded-md p-10 bg-[#13006c]" style="transform: scale(0.85);">
+     <h2 class="text-2xl text-center font-semibold">
+      Featured Projects
+     </h2>
+     <div class="flex flex-col md:flex-row h-full mt-5 gap-10">
+      <div class="w-full md:w-[40%] relative top-[10%]">
+       <div class="space-y-4">
+        <div>
+         <h3 class="font-semibold">
+          Brewed Insights
+         </h3>
+         <p class="text-sm">
+          NYC Coffee Shop Analysis using Python and KNIME
+         </p>
+        </div>
+        <div>
+         <h3 class="font-semibold">
+          Baltimore Crime Analysis
+         </h3>
+         <p class="text-sm">
+          Crime pattern analysis using Python
+         </p>
+        </div>
+        <div>
+         <h3 class="font-semibold">
+          Restaurant Management
+         </h3>
+         <p class="text-sm">
+          Sales and inventory management system
+         </p>
+        </div>
+       </div>
+       <a class="inline-block mt-6 text-white/80 hover:text-white" href="https://github.com/AbdullahJaffrey">
+        View More on GitHub →
+       </a>
+      </div>
+      <div class="relative w-full md:w-[60%] h-full rounded-lg overflow-hidden bg-white/10 p-6">
+       <div class="space-y-4">
+        <div class="bg-white/10 p-4 rounded-lg">
+         <h4 class="font-semibold">
+          Technologies Used:
+         </h4>
+         <div class="flex flex-wrap gap-2 mt-2">
+          <span class="px-2 py-1 bg-white/20 rounded-full text-xs">
+           Python
+          </span>
+          <span class="px-2 py-1 bg-white/20 rounded-full text-xs">
+           KNIME
+          </span>
+          <span class="px-2 py-1 bg-white/20 rounded-full text-xs">
+           SQL
+          </span>
+          <span class="px-2 py-1 bg-white/20 rounded-full text-xs">
+           PowerBI
+          </span>
+         </div>
+        </div>
+        <img alt="Project Preview - A detailed dashboard showing various data visualizations and charts" class="rounded-lg w-full object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/9dDb7IV4NS75CdUZcfMkInQpdSMYWS5No9NkreWeSmTvwmcnA.jpg" width="400"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Contact Card -->
+   <div class="sticky-section" id="contact">
+    <div class="card flex flex-col relative h-[450px] w-[90%] md:w-[70%] rounded-md p-10 bg-[#5196fd]" style="transform: scale(0.80);">
+     <h2 class="text-2xl text-center font-semibold">
+      Get In Touch
+     </h2>
+     <div class="flex flex-col md:flex-row h-full mt-5 gap-10">
+      <div class="w-full md:w-[40%] relative top-[10%]">
+       <div class="space-y-4">
+        <p class="text-sm">
+         Let's connect and discuss how we can work together!
+        </p>
+        <div>
+         <p class="text-sm">
+          📧 abdullahjafri8@gmail.com
+         </p>
+         <p class="text-sm">
+          📱 03138667347
+         </p>
+         <p class="text-sm">
+          📍 Karachi, Pakistan
+         </p>
+        </div>
+        <div class="flex gap-4">
+         <a class="text-white/80 hover:text-white" href="https://www.linkedin.com/in/abdullah-jaffrey-685b2921a/">
+          LinkedIn
+         </a>
+         <a class="text-white/80 hover:text-white" href="https://github.com/AbdullahJaffrey">
+          GitHub
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="relative w-full md:w-[60%] h-full rounded-lg overflow-hidden">
+       <form class="bg-white/10 p-6 rounded-lg space-y-4">
+        <input class="w-full p-2 bg-white/10 rounded-md text-white" placeholder="Name" type="text"/>
+        <input class="w-full p-2 bg-white/10 rounded-md text-white" placeholder="Email" type="email"/>
+        <textarea class="w-full p-2 bg-white/10 rounded-md h-32 text-white" placeholder="Message"></textarea>
+        <button class="w-full bg-white text-[#5196fd] py-2 rounded-md hover:bg-opacity-90">
+         Send Message
+        </button>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-slate-950 text-white py-12 border-t border-gray-800">
+   <div class="container mx-auto px-6">
+    <div class="flex flex-col items-center justify-center space-y-6">
+     <!-- Social Media Links -->
+     <div class="flex space-x-8">
+      <a class="social-icon text-gray-300 hover:text-[#5196fd]" href="https://www.facebook.com/Abdullah.Ahmed.j.52035/" target="_blank">
+       <i class="fab fa-facebook text-2xl">
+       </i>
+      </a>
+      <a class="social-icon text-gray-300 hover:text-[#5196fd]" href="https://github.com/AbdullahJaffrey" target="_blank">
+       <i class="fab fa-github text-2xl">
+       </i>
+      </a>
+      <a class="social-icon text-gray-300 hover:text-[#5196fd]" href="https://www.linkedin.com/in/abdullah-jaffrey-685b2921a/" target="_blank">
+       <i class="fab fa-linkedin text-2xl">
+       </i>
+      </a>
+     </div>
+     <!-- Credit Line -->
+     <div class="text-center text-gray-400 mt-4">
+      Made by Abdullah Jafri and AI with ❤️
+     </div>
+     <!-- Copyright -->
+     <div class="text-sm text-gray-500">
+      © 2024 Abdullah
+     </div>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
